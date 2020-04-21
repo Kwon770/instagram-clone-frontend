@@ -49,11 +49,11 @@ const Link = styled.span`
 export default ({
   action,
   setAction,
-  username,
+  userName,
   firstName,
   lastName,
   email,
-  onLogin,
+  onSubmit,
 }) => (
   <Wrapper>
     <Form>
@@ -67,7 +67,7 @@ export default ({
           <Input placeholder={"First name"} {...firstName} />
           <Input placeholder={"Last name"} {...lastName} />
           <Input placeholder={"Email"} {...email} type="email" />
-          <Input placeholder={"Username"} {...username} />
+          <Input placeholder={"Username"} {...userName} />
           <Button text={"Sign up"} />
         </form>
       )}
