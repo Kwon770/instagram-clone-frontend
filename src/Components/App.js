@@ -30,7 +30,7 @@ export default () => {
     <ThemeProvider theme={Theme}>
       <Wrapper>
         <GlobalStyles />
-        <Router isLoggedIn={false} />
+        <Router isLoggedIn={isLoggedIn} />
         <Footer />
         <ToastContainer position={toast.POSITION.BOTTOM_LEFT} />
       </Wrapper>
