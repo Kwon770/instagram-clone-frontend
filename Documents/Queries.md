@@ -20,9 +20,11 @@ export const CREATE_ACCOUNT = gql`
 `;
 ```
 
-## Send gql queries with 'react-apollo-hooks'
+## Send gql mutation with 'react-apollo-hooks'
 
-`useMutation(QUERIES, { update: (_, __) => {}, variables: {VARIABLE: VALUE}})`
+* `useMutation(QUERIES, { update: (_, __) => {}, variables: {VARIABLE: VALUE}})`
+
+`update(_, __) => {}` : This will be execute when the mutation is transmitted
 
 ```js
 import { useMutation } from "react-apollo-hooks";
@@ -35,4 +37,20 @@ const [createAccountMutation] = useMutation(CREATE_ACCOUNT, {
       lastName: lastName.value,
     },
   });
+```
+
+## Send gql query with 'react-apollo-hooks'
+
+```js
+import { useQuery } from "react-apollo-hooks";
+
+const ME = gql`
+  {
+    me {
+      userName
+    }
+  }
+`;
+
+const me = useQuery(ME);
 ```

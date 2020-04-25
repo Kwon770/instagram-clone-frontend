@@ -8,7 +8,8 @@
 
 ## Document
 
-| Title   | Description                         | Description                             |
-| ------- | ----------------------------------- | --------------------------------------- |
-| Styles  | Style skill with styled-component   | [Documentation](./Documents/Styles.md)  |
-| Queries | Communicate with server from client | [Documentation](./Documents/Queries.md) |
+| Title   | Description                          | Description                             |
+| ------- | ------------------------------------ | --------------------------------------- |
+| Styles  | Style skill with styled-component    | [Documentation](./Documents/Styles.md)  |
+| Queries | Communicate with server from client  | [Documentation](./Documents/Queries.md) |
+| Router  | Managing pages with react-router-dom | [Documentation](./Documents/Router.md)  |

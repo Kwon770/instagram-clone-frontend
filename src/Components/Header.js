@@ -70,7 +70,7 @@ const ME = gql`
   }
 `;
 
-// withRouter: It give everything what can do by router (you want to use router, but when you don't have it)
+// withRouter: It make you get the Router from here although there is no router
 // This is also Same
 // const Header = ({history}) => {};
 // export deafult withRouter (Header);
