@@ -26,7 +26,7 @@ const PostContainer = ({
       setTimeout(() => setCurrentItem(currentItem + 1), 3000);
     }
   };
-  // 'useEffect' is same with  'componentDidMount'
+  // 'useEffect' is almost same with  'componentDidMount'
   useEffect(() => {
     slide();
   }, [currentItem]);

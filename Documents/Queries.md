@@ -1,3 +1,5 @@
+## Local quries with Apollo
+
 ## Making gql queries with 'apollo-boost'
 
 ```js
@@ -22,7 +24,7 @@ export const CREATE_ACCOUNT = gql`
 
 ## Send gql mutation with 'react-apollo-hooks'
 
-* `useMutation(QUERIES, { update: (_, __) => {}, variables: {VARIABLE: VALUE}})`
+- `useMutation(QUERIES, { update: (_, __) => {}, variables: {VARIABLE: VALUE}})`
 
 `update(_, __) => {}` : This will be execute when the mutation is transmitted
 
@@ -30,13 +32,13 @@ export const CREATE_ACCOUNT = gql`
 import { useMutation } from "react-apollo-hooks";
 
 const [createAccountMutation] = useMutation(CREATE_ACCOUNT, {
-    variables: {
-      email: email.value,
-      userName: userName.value,
-      firstName: firstName.value,
-      lastName: lastName.value,
-    },
-  });
+  variables: {
+    email: email.value,
+    userName: userName.value,
+    firstName: firstName.value,
+    lastName: lastName.value,
+  },
+});
 ```
 
 ## Send gql query with 'react-apollo-hooks'
