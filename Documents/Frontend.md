@@ -31,9 +31,9 @@ useEffect(() => {
 }, [currentItem]);
 ```
 
-## Remake style of component with styled-component
+## Remake the style of component with styled-component
 
-We can only remake style of component what support the prob, 'className'
+We can only remake the style of component what support the prob, 'className'
 
 ```js
 import TextareaAutosize from "react-autosize-textarea";
