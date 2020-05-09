@@ -8,7 +8,7 @@ import {
   CONFIRM_SECRET,
   LOCAL_LOG_IN,
 } from "./AuthQueris";
-import { toast, ToastType } from "react-toastify";
+import { toast } from "react-toastify";
 
 export default () => {
   const [action, setAction] = useState("logIn");
