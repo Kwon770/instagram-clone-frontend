@@ -24,7 +24,7 @@ const PostContainer = ({
   const [toggleLikeMutation] = useMutation(TOGGLE_LIKE, {
     variables: { postId: id },
   });
-  const addCommentMutation = useMutation(ADD_COMMENT, {
+  const [addCommentMutation] = useMutation(ADD_COMMENT, {
     variables: { postId: id, text: comment.value },
   });
   const slide = () => {
@@ -52,6 +52,14 @@ const PostContainer = ({
     }
   };
 
+  const onKeyUp = (e) => {
+    if (e.keyCode === 13) {
+      comment.setValue("");
+      // e.preventDefault();
+      // addCommentMutation();
+    }
+  };
+
   return (
     <PostPresenter
       location={location}
@@ -67,6 +75,7 @@ const PostContainer = ({
       setLikeCount={setLikeCount}
       currentItem={currentItem}
       toggleLike={toggleLike}
+      onKeyUp={onKeyUp}
     />
   );
 };

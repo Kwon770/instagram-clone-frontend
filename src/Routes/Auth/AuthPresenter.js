@@ -76,10 +76,27 @@ export default ({
             <title>Sing up | Prismagram</title>
           </Helmet>
           <form onSubmit={onSubmit}>
-            <Input placeholder={"First name"} {...firstName} />
-            <Input placeholder={"Last name"} {...lastName} />
-            <Input placeholder={"Email"} {...email} type="email" />
-            <Input placeholder={"Username"} {...userName} />
+            <Input
+              placeholder={"First name"}
+              value={firstName.value}
+              onChange={firstName.onChange}
+            />
+            <Input
+              placeholder={"Last name"}
+              value={lastName.value}
+              onChange={lastName.onChange}
+            />
+            <Input
+              placeholder={"Email"}
+              value={email.value}
+              onChange={email.onChange}
+              type="email"
+            />
+            <Input
+              placeholder={"Username"}
+              value={userName.value}
+              onChange={userName.onChange}
+            />
             <Button text={"Sign up"} />
           </form>
         </>
