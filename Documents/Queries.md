@@ -28,6 +28,8 @@ export const CREATE_ACCOUNT = gql`
 
 `update(_, __) => {}` : This will be execute when the mutation is transmitted
 
+- _** when you declare mutation, you must use '[]' **_
+
 ```js
 import { useMutation } from "react-apollo-hooks";
 
@@ -43,6 +45,8 @@ const [createAccountMutation] = useMutation(CREATE_ACCOUNT, {
 
 ## Send gql query with 'react-apollo-hooks'
 
+- `useQuery(QUERIES, { update: (_, __) => {}, variables: {VARIABLE: VALUE}})`
+
 ```js
 import { useQuery } from "react-apollo-hooks";
 
@@ -54,5 +58,13 @@ const ME = gql`
   }
 `;
 
-const me = useQuery(ME);
+const {data, error, loading} = useQuery(ME);
+if (loading) {
+  return <div>Loading...</div>;
+} 
+if (error) {
+  return <div>Error!... {error.message}</div>;
+}
+
+return <div>{data.me.userName}</div>
 ```
