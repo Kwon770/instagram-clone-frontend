@@ -24,9 +24,10 @@ export const CREATE_ACCOUNT = gql`
 
 ## Send gql mutation with 'react-apollo-hooks'
 
-- `useMutation(QUERIES, { update: (_, __) => {}, variables: {VARIABLE: VALUE}})`
+- `useMutation(QUERIES, { update: (_, __) => {}, skip: CONDITION, variables: {VARIABLE: VALUE}})`
 
 `update(_, __) => {}` : This will be execute when the mutation is transmitted
+`skip: CONDITION` : If the conditions what skip get is true, don't send this query
 
 - _** when you declare mutation, you must use '[]' **_
 
