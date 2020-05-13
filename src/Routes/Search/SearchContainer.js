@@ -7,10 +7,11 @@ import { SEARCH } from "./SearchQueries";
 export default withRouter(({ location: { search } }) => {
   const term = search.split("=")[1];
   const { data, loading } = useQuery(SEARCH, {
-    skip: searchTerm === undefined, // if the conditions what skip get is true, don't send this query
+    skip: term === undefined, // if the conditions what skip get is true, don't send this query
     variables: {
       term,
     },
   });
+  //   console.log(data);
   return <SearchPresenter searchTerm={term} loading={loading} data={data} />;
 });
