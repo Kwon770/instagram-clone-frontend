@@ -18,8 +18,9 @@ export default () => {
 
 ## Switch 
 
-`<Switch><Switch/>` : Switch render only one Route
+`<Switch><Switch/>` : Switch render only one Route _(If it find the path in the front, it will not search more router)_
 
+`./src/Component/Routes.js`
 ```js
 import { Route, Switch } from "react-router-dom";
 
@@ -73,3 +74,24 @@ const Header = ({history}) => {
 };
 export deafult withRouter (Header);
 ```
+
+## Two methods to set Url with variables
+
+# 1. Using the params
+
+Set Route like this, and
+`<Route path="/:username" component={Profile} />`
+
+Set 'to' props as the variable what you want to set as url
+`<Link to={VARIABLE-USERNAME}>`
+
+_=> http://localhost:3000/#/VARIABLE-USERNAME_
+
+# 2. Using the history object
+
+Get the history from router and set Url by `history.push()`
+`history.push(`/search?term=${search.value}`);`
+
+_If you can't get the router, use `withRouter`_
+
+_=> http://localhost:3000/#/search?term=SEARCH-VALUE_
