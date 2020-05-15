@@ -3,9 +3,8 @@ import { toast } from "react-toastify";
 import PropTypes from "prop-types";
 import useInput from "../../Hooks/useInput";
 import PostPresenter from "./PostPresenter";
-import { useMutation, useQuery } from "react-apollo-hooks";
+import { useMutation } from "react-apollo-hooks";
 import { TOGGLE_LIKE, ADD_COMMENT } from "./PostQueries";
-import { ME } from "../../SharedQueries";
 
 const PostContainer = ({
   id,

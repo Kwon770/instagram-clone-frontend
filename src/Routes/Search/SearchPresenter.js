@@ -65,6 +65,7 @@ const SearchPresenter = ({ searchTerm, loading, data }) => {
           ) : (
             data.searchPost.map((post) => (
               <SquarePost
+                id={post.id}
                 likeCount={post.likeCount}
                 commentCount={post.commentCount}
                 file={post.files[0]}
