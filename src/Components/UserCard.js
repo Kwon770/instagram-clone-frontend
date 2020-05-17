@@ -19,14 +19,17 @@ const EAvatar = styled(Avatar)`
 `;
 
 const ELink = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: inherit;
   margin-bottom: 10px;
 `;
 
 const UserCard = ({ id, userName, isFollowing, url, isSelf }) => (
   <Card>
-    <EAvatar url={url} size={"md"} />
     <ELink to={`/${userName}`}>
+      <EAvatar url={url} size={"md"} />
       <FatText text={userName} />
     </ELink>
     {!isSelf && <FollowButton id={id} isFollowing={isFollowing} />}
