@@ -15,7 +15,7 @@ const LoggedInRoutes = () => (
     <Route path="/explore" component={Explore} />
     <Route path="/search" component={Search} />
     <Route path="/post" component={Post} />
-    <Route path="/:username" component={Profile} />
+    <Route path="/:userName" component={Profile} />
   </Switch>
 );
 
