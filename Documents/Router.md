@@ -1,6 +1,7 @@
 ## HashRouter
 
 `./src/Components/App.js` => The very root of the components
+
 ```js
 import { HashRouter as Router } from "react-router-dom";
 import Routes from "./Routes";
@@ -8,19 +9,18 @@ import Routes from "./Routes";
 export default () => {
   return (
     <Router>
-        <Routes isLoggedIn={isLoggedIn} />
+      <Routes isLoggedIn={isLoggedIn} />
     </Router>
   );
 };
-
 ```
 
-
-## Switch 
+## Switch
 
 `<Switch><Switch/>` : Switch render only one Route _(If it find the path in the front, it will not search more router)_
 
 `./src/Component/Routes.js`
+
 ```js
 import { Route, Switch } from "react-router-dom";
 
@@ -41,6 +41,31 @@ const AppRouter = ({ isLoggedIn }) =>
   isLoggedIn ? <LoggedInRoutes /> : <LoggedOutRoutes />;
 
 export default AppRouter;
+```
+
+## Redirect
+
+If Client try to connect the Route where there is nothing, we must redirect Client.
+
+_But Redirect must be at last in Switch. Because when Client can't find any Route, we will redirect Client._
+
+```js
+const LoggedInRoutes = () => (
+  <Switch>
+    <Route exact path="/" component={Feed} />
+    <Route path="/explore" component={Explore} />
+    <Route path="/post" component={Post} />
+    <Route path="/:userName" component={Profile} />
+    <Redirect from="*" to="/" />
+  </Switch>
+);
+
+const LoggedOutRoutes = () => (
+  <Switch>
+    <Route exact path="/" component={Auth} />
+    <Redirect from="*" to="/" />
+  </Switch>
+);
 ```
 
 ## withRouter
@@ -90,7 +115,7 @@ _=> http://localhost:3000/#/VARIABLE-USERNAME_
 # 2. Using the history object
 
 Get the history from router and set Url by `history.push()`
-`history.push(`/search?term=${search.value}`);`
+`history.push(`/search?term=\${search.value}`);`
 
 _If you can't get the router, use `withRouter`_
 
