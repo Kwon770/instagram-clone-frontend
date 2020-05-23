@@ -1,16 +1,12 @@
 # Instagram Clone | 🖥Web 
 
-|                     React                     |                    NodeJS                    |                     ES6                     |
-| :-------------------------------------------: | :------------------------------------------: | :-----------------------------------------: |
-| <img src="./Documents/react.png" width="200"> | <img src="./Documents/node.png" width="200"> | <img src="./Documents/es6.jpg" width="200"> |
+|                     React                     |                    NodeJS                    |                     ES6                     |                styled component                |
+| :-------------------------------------------: | :------------------------------------------: | :-----------------------------------------: | :--------------------------------------------: |
+| <img src="./Documents/react.png" width="200"> | <img src="./Documents/node.png" width="200"> | <img src="./Documents/es6.jpg" width="200"> | <img src="./Documents/styled.png" width="200"> |
 
 |                  GraphQl                   |                     Apollo                     |                  React Hooks                  |
 | :----------------------------------------: | :--------------------------------------------: | :-------------------------------------------: |
 | <img src="./Documents/gq.png" width="200"> | <img src="./Documents/apollo.png" width="200"> | <img src="./Documents/hooks.png" width="200"> |
-
-|                styled component                |
-| :--------------------------------------------: |
-| <img src="./Documents/styled.png" width="200"> |
 
 ## Document
 
